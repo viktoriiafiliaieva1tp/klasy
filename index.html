@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ćwiczenia CSS – klasy, id, zagnieżdżanie i grupowanie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="naglowek">
+    <h1 class="tytul">Ćwiczenia CSS – selektory</h1>
+    <p class="podtytul">Rozwiąż zadania w pliku <code>style.css</code></p>
+  </header>
+
+  <main>
+    <section id="sekcja-wstep">
+      <h2 class="naglowek-sekcji">Wstęp</h2>
+      <p>Na tej stronie znajdziesz elementy z klasami, identyfikatorami oraz zagnieżdżoną strukturą HTML.
+         Twoim zadaniem jest napisanie odpowiednich reguł CSS w pliku <code>style.css</code>.</p>
+    </section>
+
+    <section id="sekcja-boxy">
+      <h2 class="naglowek-sekcji">Boxy</h2>
+      <div class="box">
+        <p>To jest pierwszy box (klasa <code>box</code>).</p>
+      </div>
+      <div class="box specjalny">
+        <p>To jest drugi box – ma klasę <code>box</code> oraz <code>specjalny</code>.</p>
+      </div>
+      <div class="box">
+        <p>Trzeci box (klasa <code>box</code>).</p>
+      </div>
+    </section>
+
+    <section id="sekcja-karty">
+      <h2 class="naglowek-sekcji">Karty produktów</h2>
+      <div class="karta">
+        <h3 class="nazwa-produktu">Produkt A</h3>
+        <p class="opis">Opis produktu A – zwykły tekst w karcie.</p>
+        <span class="cena">49,99 zł</span>
+      </div>
+      <div class="karta">
+        <h3 class="nazwa-produktu">Produkt B</h3>
+        <p class="opis">Opis produktu B – też zwykły tekst.</p>
+        <span class="cena">79,00 zł</span>
+      </div>
+      <div class="karta wyrozniona">
+        <h3 class="nazwa-produktu">Produkt C (wyróżniony)</h3>
+        <p class="opis">Ten produkt ma dodatkową klasę <code>wyrozniona</code>.</p>
+        <span class="cena">99,00 zł</span>
+      </div>
+    </section>
+
+    <section id="sekcja-listy">
+      <h2 class="naglowek-sekcji">Listy</h2>
+      <ul class="lista">
+        <li>Element listy 1</li>
+        <li class="wazny">Element listy 2 (klasa <code>wazny</code>)</li>
+        <li>Element listy 3</li>
+        <li class="wazny">Element listy 4 (klasa <code>wazny</code>)</li>
+      </ul>
+    </section>
+
+    <section id="sekcja-formularz">
+      <h2 class="naglowek-sekcji">Formularz</h2>
+      <form id="formularz-kontakt">
+        <label for="imie">Imię:</label>
+        <input type="text" id="imie" name="imie" class="pole">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" class="pole">
+
+        <label for="wiadomosc">Wiadomość:</label>
+        <textarea id="wiadomosc" name="wiadomosc" class="pole" rows="4"></textarea>
+
+        <button type="submit" class="przycisk">Wyślij</button>
+      </form>
+    </section>
+
+    <section id="sekcja-footer-info">
+      <h2 class="naglowek-sekcji">Informacje dodatkowe</h2>
+      <div class="info">
+        <p>Ten akapit jest wewnątrz <code>div.info</code>.</p>
+        <p class="uwaga">Ten akapit ma klasę <code>uwaga</code> i jest zagnieżdżony.</p>
+      </div>
+      <p class="uwaga">Ten akapit ma klasę <code>uwaga</code>, ale NIE jest zagnieżdżony w <code>.info</code>.</p>
+    </section>
+  </main>
+
+  <footer id="stopka">
+    <p class="tekst-stopki">Stopka strony – ćwiczenia CSS</p>
+    <p class="tekst-stopki">Klasy • ID • Zagnieżdżanie • Grupowanie</p>
+  </footer>
+
+</body>
+</html>

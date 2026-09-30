@@ -1,0 +1,252 @@
+/* ============================================================
+   ĆWICZENIA CSS – selektory: klasa, id, zagnieżdżanie, grupowanie
+   ============================================================
+   Otwórz index.html w przeglądarce i rozwiązuj zadania poniżej.
+   Po każdej zmianie odśwież stronę, aby zobaczyć efekt.
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   ZADANIE 1 – Selektory klas
+   ------------------------------------------------------------
+   a) Nadaj wszystkim elementom z klasą "box":
+      - tło: #e8f4f8
+      - padding: 16px
+      - margin-bottom: 12px
+      - zaokrąglone rogi: 8px
+      - obramowanie: 1px solid #b3d9e6
+
+   b) Elementom z klasą "box" oraz "specjalny" (oba naraz)
+      dodaj dodatkowo:
+      - tło: #fff3cd
+      - obramowanie: 2px solid #ffc107
+   ------------------------------------------------------------ */
+.box {
+    background-color: #e8f4f8;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #b3d9e6;
+}
+
+.box.specjalny {
+    background-color: #fff3cd;
+    border: 2px solid #ffc107;
+}
+
+
+/* ------------------------------------------------------------
+   ZADANIE 2 – Selektory ID
+   ------------------------------------------------------------
+   a) Elementowi o id="naglowek" nadaj:
+      - tło: #2c3e50
+      - kolor tekstu: biały
+      - padding: 24px
+      - wyśrodkowanie tekstu (text-align: center)
+
+   b) Elementowi o id="stopka" nadaj:
+      - tło: #34495e
+      - kolor tekstu: #ecf0f1
+      - padding: 20px
+      - text-align: center
+      - margin-top: 40px
+   ------------------------------------------------------------ */
+#naglowek {
+    background-color: #2c3e50;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+#stopka {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* ------------------------------------------------------------
+   ZADANIE 3 – Zagnieżdżanie (selektory potomków)
+   ------------------------------------------------------------
+   a) Wszystkim nagłówkom h3 o klasie "nazwa-produktu",
+      które znajdują się WEWNĄTRZ elementu z klasą "karta",
+      nadaj:
+      - kolor: #2980b9
+      - margin-top: 0
+
+   b) Akapitom o klasie "uwaga", które znajdują się
+      WEWNĄTRZ elementu z klasą "info", nadaj:
+      - kolor: #c0392b
+      - font-weight: bold
+      - tło: #fdecea
+      - padding: 8px
+
+   (Zwróć uwagę: akapit z klasą "uwaga" poza .info
+    NIE powinien dostać tych stylów.)
+   ------------------------------------------------------------ */
+.karta h3.nazwa-produktu {
+    color: #2980b9;
+    margin-top: 0
+}
+
+.info p.uwaga {
+    color: #c0392b;
+    font-weight: bold;
+    background-color: #fdecea;
+    padding: 8px;
+}
+
+
+
+/* ------------------------------------------------------------
+   ZADANIE 4 – Grupowanie selektorów
+   ------------------------------------------------------------
+   a) Wspólną regułą styluj:
+      - wszystkie elementy z klasą "naglowek-sekcji"
+      - oraz element h1 z klasą "tytul"
+      nadając im:
+      - font-family: Georgia, serif
+      - color: #1a5276
+
+   b) Wspólną regułą styluj:
+      - elementy z klasą "cena"
+      - oraz elementy z klasą "przycisk"
+      nadając im:
+      - font-weight: bold
+      - color: #27ae60
+   ------------------------------------------------------------ */
+.naglowek-sekcji, h1.tytul {
+    font-family: Georgia, serif;
+    color: #1a5276;
+}
+
+.cena, .przycisk {
+    font-weight: bold;
+    color: #27ae60;
+
+}
+
+
+/* ------------------------------------------------------------
+   ZADANIE 5 – Połączenie kilku technik
+   ------------------------------------------------------------
+   a) Wszystkim elementom li o klasie "wazny",
+      które są wewnątrz ul z klasą "lista", nadaj:
+      - color: #8e44ad
+      - font-weight: bold
+      - list-style-type: square
+
+   b) Polom formularza (klasa "pole") wewnątrz
+      formularza o id="formularz-kontakt" nadaj:
+      - display: block
+      - width: 100%
+      - max-width: 400px
+      - padding: 8px
+      - margin-bottom: 12px
+      - border: 1px solid #bdc3c7
+      - border-radius: 4px
+
+   c) Przyciskowi z klasą "przycisk" nadaj:
+      - background-color: #27ae60
+      - color: white
+      - border: none
+      - padding: 10px 20px
+      - border-radius: 4px
+      - cursor: pointer
+   ------------------------------------------------------------ */
+ul.lista li.wazny {
+    color: #8e44ad;
+    font-weight: bold;
+    list-style-type: square;
+}
+
+#formularz-kontakr .pole {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+.przycisk {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+/* ------------------------------------------------------------
+   ZADANIE 6 (opcjonalne) – Karty produktów
+   ------------------------------------------------------------
+   a) Elementom z klasą "karta" nadaj:
+      - border: 1px solid #ddd
+      - border-radius: 8px
+      - padding: 16px
+      - margin-bottom: 16px
+      - max-width: 320px
+
+   b) Karcie z dodatkową klasą "wyrozniona" nadaj:
+      - border-color: #f39c12
+      - box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3)
+   ------------------------------------------------------------ */
+.karta {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    max-width: 320px;
+    
+}
+
+.karta.wyrozniona {
+    border-color: #f39c12;
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+}
+
+
+/* ------------------------------------------------------------
+   ZADANIE 7 (opcjonalne) – Uporządkowanie strony
+   ------------------------------------------------------------
+   a) Elementowi body nadaj:
+      - font-family: Arial, Helvetica, sans-serif
+      - margin: 0
+      - padding: 0
+      - line-height: 1.5
+      - background-color: #f5f6fa
+
+   b) Elementowi main nadaj:
+      - max-width: 800px
+      - margin: 0 auto
+      - padding: 24px
+
+   c) Elementom z klasą "podtytul" oraz "tekst-stopki"
+      (grupowanie!) nadaj:
+      - opacity: 0.85
+      - font-size: 0.95rem
+   ------------------------------------------------------------ */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: #f5f6fa;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.podtytul, .tekst-stopki {
+    opacity: 0.85;
+    font-size: 0.95rem;
+}
